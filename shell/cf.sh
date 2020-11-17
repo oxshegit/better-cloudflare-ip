@@ -42,7 +42,7 @@ do
 		rm -rf data.txt
 		n=0
 		m=$(cat anycast.txt | wc -l)
-		count=m/30+1
+		count=m/30-12
 		for i in `cat anycast.txt`
 		do
 			ping -c $count -i 0.2 -n -q $i > icmp/$n.log&
